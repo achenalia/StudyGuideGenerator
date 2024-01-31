@@ -22,12 +22,6 @@ messages = [{"role": "system", "content": "You are a study-guide generator for c
                                           "return a joint study guide including all those generated."}]
 
 
-# message = input("Please enter a topic following a course (ex. Computer Science, big-o notation).\nYou may also "
-#                 "provide a list of topics by placing them between brackets (ex. Computer Science, [data structures, "
-#                 "big-o notation, tuples]).\nNOTE: For more detailed and extensive guides, please run the program one "
-#                 "at a time for each topic using the first method described.\nEnter <COURSE, TOPIC> or <COURSE, "
-#                 "[TOPIC1, TOPIC2, TOPIC3]>:")
-
 def submit(message):
     now = datetime.now()
     current_time = now.strftime("%b.%d.%Y.%H.%M.%S")
