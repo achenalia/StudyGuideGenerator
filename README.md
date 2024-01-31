@@ -1,4 +1,5 @@
 **Preparation**
+
 To use the generator, you first need to obtain your OpenAI API key. Follow these instructions to access your key:
   Step 1: Create an account on OpenAI and log into an account.
   
