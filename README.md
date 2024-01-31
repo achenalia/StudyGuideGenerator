@@ -9,6 +9,8 @@ To use the generator, you first need to obtain your OpenAI API key. Follow these
   ![image](https://github.com/ngholomennod/StudyGuideGenerator/assets/116604264/a276c973-7066-4b19-a5a6-a4170c894a40)
   
   Step 5: Click on 'Environment Variables':
+  
   ![image](https://github.com/ngholomennod/StudyGuideGenerator/assets/116604264/a882af74-6e8a-43b4-b6f6-3c1498b2e2b7)
+  
   Step 6: Under the user variables list (the table on the top), click 'new,' then input OPENAI_API_KEY as the name, with your api-key as the variable value.
   Step 7: Run App.py and get started! Your guides will be generated in the folder where the python files are located.
