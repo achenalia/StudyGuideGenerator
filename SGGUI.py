@@ -55,14 +55,16 @@ class SGGUI_Panel(wx.Panel):
         self.SetSizer(my_sizer)
 
     def on_add(self, event):
+        index = 0
         course = self.text_ctrl.GetValue()
         topic = self.text_ctrl2.GetValue()
-        if not course:
+        if not course or not topic:
             print("You didn't enter anything!")
         else:
             print("Adding...")
-            self.list_ctrl.InsertItem(0, course)
-            self.list_ctrl.InsertItem(1, topic)
+            self.list_ctrl.InsertItem(index, course)
+            self.list_ctrl.SetItem(index, 1, topic)
+            index+=1
 
 
     def on_submit(self, event):
