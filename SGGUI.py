@@ -1,5 +1,4 @@
 import wx
-from wx import LIST_AUTOSIZE, LIST_FORMAT_CENTER
 
 import OpenAISetup
 
@@ -7,9 +6,9 @@ import OpenAISetup
 class SGGUI(wx.Frame):
     def __init__(self):
         super().__init__(parent=None,
-                         title="Ngholomennod's Study Guide Generator")
+                         title="Ngholomennod's Study Guide Generator", style=wx.DEFAULT_FRAME_STYLE ^ wx.RESIZE_BORDER)
         self.panel = SGGUI_Panel(self)
-        self.SetSize(770, 360)
+        self.SetSize(770, 335)
         self.Show()
 
 
@@ -21,7 +20,7 @@ class SGGUI_Panel(wx.Panel):
         topic_label = wx.StaticText(self, label="Topic(s)")
         self.text_ctrl = wx.TextCtrl(self)
         self.text_ctrl2 = wx.TextCtrl(self)
-        instructions = wx.StaticText(self, label="Please enter a course name followed by a topic like so -> (ex. "
+        self.instructions = wx.StaticText(self, label="Please enter a course name followed by a topic like so -> (ex. "
                                                  "Computer Science, big-o notation) then click [Add Study-Guide]."
                                                  "\nAfter you add your guides, "
                                                  "clicking on the [Generate Study-Guide(s)] button will produce a "
@@ -36,8 +35,9 @@ class SGGUI_Panel(wx.Panel):
         self.list_ctrl.row_obj_dict = {}
         self.list_ctrl.InsertColumn(0, 'Course', width=270)
         self.list_ctrl.InsertColumn(1, 'Topic(s)', width=470)
+        self.progress = wx.StaticText(self, label="Not yet generated, awaiting user input(s).")
 
-        my_sizer.Add(instructions, 0, wx.ALL | wx.LEFT, 5)
+        my_sizer.Add(self.instructions, 0, wx.ALL | wx.LEFT, 5)
 
         my_sizer2 = wx.BoxSizer(wx.HORIZONTAL)
         my_sizer2.AddSpacer(5)
@@ -50,8 +50,13 @@ class SGGUI_Panel(wx.Panel):
 
         my_sizer.Add(self.list_ctrl, 0, wx.ALL | wx.EXPAND, 5)
 
-        my_sizer.Add(add_btn, 0, wx.ALL | wx.LEFT, 5)
-        my_sizer.Add(submit_btn, 0, wx.ALL | wx.LEFT, 5)
+        my_sizer3 = wx.BoxSizer(wx.HORIZONTAL)
+        my_sizer3.Add(add_btn, 0, wx.ALL | wx.LEFT, 10)
+        my_sizer3.Add(self.progress, 0, wx.ALL | wx.CENTER, 5)
+        my_sizer3.AddSpacer(225)
+        my_sizer3.Add(submit_btn, 0, wx.ALL | wx.LEFT, 10)
+
+        my_sizer.Add(my_sizer3)
         self.SetSizer(my_sizer)
 
     def on_add(self, event):
@@ -73,3 +78,4 @@ class SGGUI_Panel(wx.Panel):
             print("Communicating with OpenAI...")
             OpenAISetup.submit(self.list_ctrl.GetItemText(index, 0) + ', ' + self.list_ctrl.GetItemText(index, 1))
             index += 1
+            self.progress.SetLabel("Study-guides generated! Happy studying!")
