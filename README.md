@@ -7,6 +7,7 @@ To use the generator, you first need to obtain your OpenAI API key. Follow these
   Step 3: A page of API keys is then opened and we can see the button ‘Create new secret key’ click on that and a secret key is generated copy that key and save it on Notepad or anywhere else because it is required in upcoming steps.
   
   _Next Steps for Windows_
+  
   Step 4: Press the Windows button and type "environment variables" and select this option:
   
   ![image](https://github.com/ngholomennod/StudyGuideGenerator/assets/116604264/a276c973-7066-4b19-a5a6-a4170c894a40)
