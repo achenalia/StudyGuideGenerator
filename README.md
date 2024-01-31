@@ -1,6 +1,8 @@
 **Preparation**
+Required python packages: wxpython, openai.
 
 To use the generator, you first need to obtain your OpenAI API key. Follow these instructions to access your key:
+
   Step 1: Create an account on OpenAI and log into an account.
   
   Step 2: After login click on ‘Personal‘ on the top-right side and then click on ‘View API keys‘ as seen in the below image.
