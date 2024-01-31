@@ -15,7 +15,7 @@ class SGGUI(wx.Frame):
 class SGGUI_Panel(wx.Panel):
     def __init__(self, parent):
         super().__init__(parent)
-        my_sizer = wx.BoxSizer(wx.VERTICAL)
+        core_sizer = wx.BoxSizer(wx.VERTICAL)
         course_label = wx.StaticText(self, label="Course")
         topic_label = wx.StaticText(self, label="Topic(s)")
         self.text_ctrl = wx.TextCtrl(self)
@@ -37,27 +37,27 @@ class SGGUI_Panel(wx.Panel):
         self.list_ctrl.InsertColumn(1, 'Topic(s)', width=470)
         self.progress = wx.StaticText(self, label="Not yet generated, awaiting user input(s).")
 
-        my_sizer.Add(self.instructions, 0, wx.ALL | wx.LEFT, 5)
+        core_sizer.Add(self.instructions, 0, wx.ALL | wx.LEFT, 5)
 
-        my_sizer2 = wx.BoxSizer(wx.HORIZONTAL)
-        my_sizer2.AddSpacer(5)
-        my_sizer2.Add(course_label, wx.ALL | wx.ALIGN_LEFT, 5)
-        my_sizer2.Add(self.text_ctrl, 0, wx.ALL | wx.ALIGN_LEFT, 5)
-        my_sizer2.AddSpacer(110)
-        my_sizer2.Add(topic_label, wx.ALL | wx.ALIGN_LEFT, 5)
-        my_sizer2.Add(self.text_ctrl2, 0, wx.ALL | wx.ALIGN_LEFT, 5)
-        my_sizer.Add(my_sizer2, 1)
+        top_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        top_sizer.AddSpacer(5)
+        top_sizer.Add(course_label, wx.ALL | wx.ALIGN_LEFT, 5)
+        top_sizer.Add(self.text_ctrl, 0, wx.ALL | wx.ALIGN_LEFT, 5)
+        top_sizer.AddSpacer(110)
+        top_sizer.Add(topic_label, wx.ALL | wx.ALIGN_LEFT, 5)
+        top_sizer.Add(self.text_ctrl2, 0, wx.ALL | wx.ALIGN_LEFT, 5)
+        core_sizer.Add(top_sizer, 1)
 
-        my_sizer.Add(self.list_ctrl, 0, wx.ALL | wx.EXPAND, 5)
+        core_sizer.Add(self.list_ctrl, 0, wx.ALL | wx.EXPAND, 5)
 
-        my_sizer3 = wx.BoxSizer(wx.HORIZONTAL)
-        my_sizer3.Add(add_btn, 0, wx.ALL | wx.LEFT, 10)
-        my_sizer3.Add(self.progress, 0, wx.ALL | wx.CENTER, 5)
-        my_sizer3.AddSpacer(225)
-        my_sizer3.Add(submit_btn, 0, wx.ALL | wx.LEFT, 10)
+        bottom_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        bottom_sizer.Add(add_btn, 0, wx.ALL | wx.LEFT, 10)
+        bottom_sizer.Add(self.progress, 0, wx.ALL | wx.CENTER, 5)
+        bottom_sizer.AddSpacer(225)
+        bottom_sizer.Add(submit_btn, 0, wx.ALL | wx.LEFT, 10)
+        core_sizer.Add(bottom_sizer)
 
-        my_sizer.Add(my_sizer3)
-        self.SetSizer(my_sizer)
+        self.SetSizer(core_sizer)
 
     def on_add(self, event):
         index = 0
