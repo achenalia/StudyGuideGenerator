@@ -19,7 +19,9 @@ messages = [{"role": "system", "content": "You are a study-guide generator for c
                                           "complete and extensive study-guides for each topic. Please explain  all "
                                           "concepts mentioned as if you are teaching them to the student who is going "
                                           "to receive the guide. Then, combine and"
-                                          "return a joint study guide including all those generated."}]
+                                          "return a joint study guide including all those generated. NOTE: Please do "
+                                          "not use any characters or formatting that would not be supported by the "
+                                          ".txt file type."}]
 
 
 def submit(message):
