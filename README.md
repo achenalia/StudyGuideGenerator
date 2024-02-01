@@ -8,18 +8,17 @@ To use the generator, you first need to obtain your OpenAI API key. Follow these
   
   Step 3: A page of API keys is then opened and we can see the button ‘Create new secret key’ click on that and a secret key is generated copy that key and save it on Notepad or anywhere else because it is required in upcoming steps.
   
-  **_Next Steps for Windows_**
+  **_Next Steps for Windows (Using Command Prompt)_**
   
-    Step 4: Press the Start button and type "Environment Variables" in the search bar. Select the "Edit the system environment variables" option from the search results.
+    Step 4: Press the Start button, type "cmd" or "Command Prompt" in the search bar, right-click on "Command Prompt" from the search results, and choose "Run as administrator" to open a Command Prompt with administrative privileges.
+  
+    Step 5: In the Command Prompt, enter the following command to set the environment variable: setx OPENAI_API_KEY "your_api_key_here"
+      Replace "your_api_key_here" with your actual OpenAI API key.
 
-  ![image](https://github.com/ngholomennod/StudyGuideGenerator/assets/116604264/a276c973-7066-4b19-a5a6-a4170c894a40)
-    
-    Step 5: In the System Properties window, click the 'Environment Variables' button:
-    
-  ![image](https://github.com/ngholomennod/StudyGuideGenerator/assets/116604264/a882af74-6e8a-43b4-b6f6-3c1498b2e2b7)
-    
-    Step 6: Under the "User variables" section (the table on the top), click New. Enter OPENAI_API_KEY as the name and your API key as the value.
+    Step 6: Close the Command Prompt to apply the changes. You may need to reopen any command prompts or applications to see the updated environment variable.
 
+    Note: Ensure that you run the Command Prompt as an administrator to have the necessary permissions to set system-wide environment variables.
+  
   **_Next Steps for Mac_**
 
     Step 4: Press Command + Space to open Spotlight Search, then type "Terminal" and press Enter to open the terminal.
