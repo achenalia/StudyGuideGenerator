@@ -10,15 +10,15 @@ To use the generator, you first need to obtain your OpenAI API key. Follow these
   
   **_Next Steps for Windows_**
   
-    Step 4: Press the Windows button and type "environment variables" and select this option:
-    
+    Step 4: Press the Start button and type "Environment Variables" in the search bar. Select the "Edit the system environment variables" option from the search results.
+
   ![image](https://github.com/ngholomennod/StudyGuideGenerator/assets/116604264/a276c973-7066-4b19-a5a6-a4170c894a40)
     
-    Step 5: Click on 'Environment Variables':
+    Step 5: In the System Properties window, click the 'Environment Variables' button:
     
   ![image](https://github.com/ngholomennod/StudyGuideGenerator/assets/116604264/a882af74-6e8a-43b4-b6f6-3c1498b2e2b7)
     
-    Step 6: Under the user variables list (the table on the top), click 'new,' then input OPENAI_API_KEY as the name, with your api-key as the variable value.
+    Step 6: Under the "User variables" section (the table on the top), click New. Enter OPENAI_API_KEY as the name and your API key as the value.
 
   **_Next Steps for Mac_**
 
