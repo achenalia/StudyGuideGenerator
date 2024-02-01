@@ -47,4 +47,4 @@ To use the generator, you first need to obtain your OpenAI API key. Follow these
 
   Step 9: Open your terminal and enter the directory in which you have cloned this repository, and run: pip install -r requirements.txt
 
-  Step 10: Run App.py, and get started with your study-guide generation! Happy studying!
+  Step 10: Run StudyGuideGenerator.py, and get started with your study-guide generation! Happy studying!
