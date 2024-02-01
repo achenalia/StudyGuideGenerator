@@ -1,5 +1,6 @@
-**Preparation**
-Required python packages: wxpython, openai.
+****Preparation****
+
+_NOTE: You must have python installed on your system to use this generator!_
 
 To use the generator, you first need to obtain your OpenAI API key. Follow these instructions to access your key:
 
@@ -9,16 +10,43 @@ To use the generator, you first need to obtain your OpenAI API key. Follow these
   
   Step 3: A page of API keys is then opened and we can see the button ‘Create new secret key’ click on that and a secret key is generated copy that key and save it on Notepad or anywhere else because it is required in upcoming steps.
   
-  _Next Steps for Windows_
+  **_Next Steps for Windows (Using Command Prompt)_**
   
-  Step 4: Press the Windows button and type "environment variables" and select this option:
+    Step 4: Press the Start button, type "cmd" or "Command Prompt" in the search bar, right-click on "Command Prompt" from the search results, and choose "Run as administrator" to open a Command Prompt with administrative privileges.
   
-  ![image](https://github.com/ngholomennod/StudyGuideGenerator/assets/116604264/a276c973-7066-4b19-a5a6-a4170c894a40)
+    Step 5: In the Command Prompt, enter the following command to set the environment variable: setx OPENAI_API_KEY "your_api_key_here"
+      Replace "your_api_key_here" with your actual OpenAI API key.
+
+    Step 6: Close the Command Prompt to apply the changes. You may need to reopen any command prompts or applications to see the updated environment variable.
+
+    Note: Ensure that you run the Command Prompt as an administrator to have the necessary permissions to set system-wide environment variables.
   
-  Step 5: Click on 'Environment Variables':
+  **_Next Steps for Mac_**
+
+    Step 4: Press Command + Space to open Spotlight Search, then type "Terminal" and press Enter to open the terminal.
   
-  ![image](https://github.com/ngholomennod/StudyGuideGenerator/assets/116604264/a882af74-6e8a-43b4-b6f6-3c1498b2e2b7)
+    Step 5: In the terminal, type the following command and press Enter: nano ~/.bash_profile
   
-  Step 6: Under the user variables list (the table on the top), click 'new,' then input OPENAI_API_KEY as the name, with your api-key as the variable value.
+    Step 6: In the nano text editor, add the following line at the end of the file: export OPENAI_API_KEY=your_api_key_here
+      Replace "your_api_key_here" with your actual OpenAI API key.
   
-  Step 7: Run App.py and get started! Your guides will be generated in the folder where the python files are located.
+    Step 7: Save the changes by pressing Control + X, then press Y to confirm, and finally press Enter.
+
+  **_Next Steps for Linux (Bash Shell)_**
+  
+    Step 4: Open a terminal window. You can do this by searching for "Terminal" in your application menu or using the keyboard shortcut Ctrl + Alt + T.
+  
+    Step 5: In the terminal, open your profile file using a text editor. Depending on your distribution and shell, this file could be ~/.bashrc, ~/.bash_profile, ~/.zshrc, or something similar. For example, using nano: nano ~/.bashrc
+  
+    Step 6: Add the following line at the end of the file: export OPENAI_API_KEY=your_api_key_here
+          Replace "your_api_key_here" with your actual OpenAI API key.
+  
+    Step 7: Save the changes by pressing Ctrl + X, then press Y to confirm, and finally press Enter.
+  
+    Step 8: To apply the changes, either restart your terminal or run the following command: source ~/.bashrc
+
+  **_AFTER ADDING YOUR API KEY AS ABOVE PER YOUR OS_**
+
+  Step 9: Open your terminal and enter the directory in which you have cloned this repository, and run: pip install -r requirements.txt
+
+  Step 10: Run StudyGuideGenerator.py, and get started with your study-guide generation! Happy studying!
