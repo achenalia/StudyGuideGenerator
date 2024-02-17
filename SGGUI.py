@@ -24,7 +24,9 @@ class SGGUI_Panel(wx.Panel):
                                                       "Computer Science, big-o notation) then click [Add Study-Guide]."
                                                       "\nAfter you add your guides, "
                                                       "clicking on the [Generate Study-Guide(s)] button will produce a "
-                                                      "text file for each guide.\n")
+                                                      "text file for each guide.\nIf the study guide is not specific "
+                                                      "enough, take individual concepts from the original guide and "
+                                                      "pass them back into the program.")
         submit_btn = wx.Button(self, label='Generate Study-Guide(s)')
         submit_btn.Bind(wx.EVT_BUTTON, self.on_submit)
         add_btn = wx.Button(self, label='Add Study-Guide')
