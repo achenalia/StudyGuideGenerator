@@ -12,8 +12,8 @@ except:
 openai.api_key = key
 messages = [{"role": "system", "content": "You are a study-guide generator for college level courses. First, a course "
                                           "will be specified. Then,"
-                                          "a topic will be provided (in format COURSE, TOPIC) or a list of topics for "
-                                          "that course (in format COURSE, [TOPIC1, TOPIC2, TOPIC3]. You should "
+                                          "a topic will be provided (in format COURSE, TOPIC). "
+                                          "You should "
                                           "respond with multiple study"
                                           "-guides with information about each topic, outlining concepts, explaining "
                                           "how to perform tasks required to solve problems, etc. Please write "
