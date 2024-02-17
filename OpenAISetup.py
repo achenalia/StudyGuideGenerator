@@ -16,7 +16,7 @@ messages = [{"role": "system", "content": "You are a study-guide generator for c
                                           "respond with multiple study"
                                           "-guides with information about each topic, outlining concepts, explaining "
                                           "how to perform tasks required to solve problems, etc. Please write "
-                                          "complete and extensive study-guides for each topic. Please explain  all "
+                                          "complete and extensive study-guides for each topic. Please explain all "
                                           "concepts mentioned as if you are teaching them to the student who is going "
                                           "to receive the guide. Then, combine and"
                                           "return a joint study guide including all those generated. NOTE: Please do "
