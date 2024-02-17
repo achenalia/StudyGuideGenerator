@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from pathvalidate import sanitize_filename
 import openai
 import os
 
@@ -27,7 +28,7 @@ messages = [{"role": "system", "content": "You are a study-guide generator for c
 def submit(message):
     now = datetime.now()
     current_time = now.strftime("%b.%d.%Y.%H.%M.%S")
-    filename = current_time + ' ' + ''.join([message]) + " Study-Guide.txt"
+    filename = current_time + ' ' + sanitize_filename(message) + " Study-Guide.txt"
     f = open(filename, "w")
 
     if message:
