@@ -21,10 +21,10 @@ class SGGUI_Panel(wx.Panel):
         self.text_ctrl = wx.TextCtrl(self)
         self.text_ctrl2 = wx.TextCtrl(self)
         self.instructions = wx.StaticText(self, label="Please enter a course name followed by a topic like so -> (ex. "
-                                                 "Computer Science, big-o notation) then click [Add Study-Guide]."
-                                                 "\nAfter you add your guides, "
-                                                 "clicking on the [Generate Study-Guide(s)] button will produce a "
-                                                 "text file for each guide.\n")
+                                                      "Computer Science, big-o notation) then click [Add Study-Guide]."
+                                                      "\nAfter you add your guides, "
+                                                      "clicking on the [Generate Study-Guide(s)] button will produce a "
+                                                      "text file for each guide.\n")
         submit_btn = wx.Button(self, label='Generate Study-Guide(s)')
         submit_btn.Bind(wx.EVT_BUTTON, self.on_submit)
         add_btn = wx.Button(self, label='Add Study-Guide')
@@ -69,8 +69,7 @@ class SGGUI_Panel(wx.Panel):
             print("Adding...")
             self.list_ctrl.InsertItem(index, course)
             self.list_ctrl.SetItem(index, 1, topic)
-            index+=1
-
+            index += 1
 
     def on_submit(self, event):
         index = 0
@@ -78,4 +77,4 @@ class SGGUI_Panel(wx.Panel):
             print("Communicating with OpenAI...")
             OpenAISetup.submit(self.list_ctrl.GetItemText(index, 0) + ', ' + self.list_ctrl.GetItemText(index, 1))
             index += 1
-            self.progress.SetLabel("Study-guides generated! Happy studying!")
+        self.progress.SetLabel("Study-guides generated! Happy studying!")
